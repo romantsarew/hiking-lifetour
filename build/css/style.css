@@ -745,17 +745,16 @@ button,
   .header__nav-button::before {
     position: absolute;
     content: "";
-    background-image: url("../img/svg/burger.svg");
+    background-image: url("img/svg/burger.svg");
     width: 26px;
     height: 19px;
     background-repeat: no-repeat;
-    fill: #ffffff;
     background-position: center;
   }
   .header__nav-button::after {
     position: absolute;
     content: "";
-    background-image: url("../img/svg/burger-close.svg");
+    background-image: url("img/svg/burger-close.svg");
     width: 26px;
     height: 19px;
     background-repeat: no-repeat;
