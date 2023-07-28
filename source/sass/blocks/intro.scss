@@ -16,22 +16,22 @@
 }
 
 .intro__slide--caucasus {
-  background-image: url("../../img/intro/caucasus.jpg");
+  background-image: url("../img/intro/caucasus.jpg");
 }
 
 .intro__slide--kamchatka {
-  background-image: url("../../img/intro/kamchatka.jpg");
+  background-image: url("../img/intro/kamchatka.jpg");
 }
 
 .intro__slide--altai {
-  background-image: url("../../img/intro/altai.jpg");
+  background-image: url("../img/intro/altai.jpg");
 }
 
 .intro__slide--kamchatka .intro__slide-container {
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/intro/photo-2.png");
+    background-image: url("../img/intro/photo-2.png");
     width: 277px;
     height: 366px;
     top: 295px;
@@ -41,7 +41,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/intro/photo-1.png");
+    background-image: url("../img/intro/photo-1.png");
     width: 308px;
     height: 407px;
     top: 202px;
@@ -125,7 +125,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/svg/moon.svg");
+    background-image: url("../img/svg/moon.svg");
     width: 12px;
     height: 12px;
     top: 16.5px;
@@ -145,7 +145,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/svg/level.svg");
+    background-image: url("../img/svg/level.svg");
     width: 12px;
     height: 12px;
     top: 16.5px;
