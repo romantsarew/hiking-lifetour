@@ -4,7 +4,26 @@
 }
 
 .intro__slide {
+  position: relative;
   background-size: cover;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(
+      --overlay-33,
+      linear-gradient(
+        143deg,
+        rgba(15, 20, 41, 0.33) 0%,
+        rgba(15, 20, 41, 0) 100%
+      )
+    );
+    z-index: 2;
+  }
 }
 
 .intro__slide-container {
