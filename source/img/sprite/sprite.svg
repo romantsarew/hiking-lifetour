@@ -27,6 +27,19 @@
       fill="currentColor" />
   </symbol>
   <symbol viewBox="0 0 12 22" id="video-play">
-    <path d="M12 11 0 0v22l12-11Z" fill="currentColor"/>
+    <path d="M12 11 0 0v22l12-11Z" fill="currentColor" />
+  </symbol>
+  <symbol viewBox="0 0 14 8" id="prev">
+    <path
+      d="M.646 4.354a.5.5 0 0 1 0-.708L3.828.464a.5.5 0 1 1 .708.708L1.707 4l2.829 2.828a.5.5 0 1 1-.708.708L.646 4.354ZM14 4.5H1v-1h13v1Z"
+      fill="currentColor" />
+  </symbol>
+  <symbol viewBox="0 0 14 8" id="next">
+    <path
+      d="M13.354 4.354a.5.5 0 0 0 0-.708L10.172.464a.5.5 0 0 0-.708.708L12.293 4 9.464 6.828a.5.5 0 1 0 .708.708l3.182-3.182ZM0 4.5h13v-1H0v1Z"
+      fill="currentColor" />
+  </symbol>
+  <symbol viewBox="0 0 9 14" id="arrow">
+    <path d="m1 13 6-6-6-6" stroke="currentColor" stroke-width="2" />
   </symbol>
 </svg>
