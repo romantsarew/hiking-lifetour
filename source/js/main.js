@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {burgerMenuInit} from './modules/burger/burger-init';
+import {swiperIntroTurnOn} from './modules/swiper/swiper-initial';
+import {findVideos} from './modules/video/init-video';
 
 // ---------------------------------
 
@@ -14,6 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   burgerMenuInit();
+  swiperIntroTurnOn();
+  findVideos();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

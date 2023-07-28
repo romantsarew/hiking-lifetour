@@ -1,0 +1,460 @@
+.intro {
+  width: 100%;
+  min-height: 800px;
+}
+
+.intro__slide {
+  background-size: cover;
+}
+
+.intro__slide-container {
+  position: relative;
+  padding: 182px 15px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 800px;
+}
+
+.intro__slide--caucasus {
+  background-image: url("../../img/intro/caucasus.jpg");
+}
+
+.intro__slide--kamchatka {
+  background-image: url("../../img/intro/kamchatka.jpg");
+}
+
+.intro__slide--altai {
+  background-image: url("../../img/intro/altai.jpg");
+}
+
+.intro__slide--kamchatka .intro__slide-container {
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/intro/photo-2.png");
+    width: 277px;
+    height: 366px;
+    top: 295px;
+    right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/intro/photo-1.png");
+    width: 308px;
+    height: 407px;
+    top: 202px;
+    right: 100px;
+  }
+}
+
+.intro__slide-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 944px;
+  width: fit-content;
+
+  & h3 {
+    margin: 0;
+    font-size: 77px;
+    line-height: 77px;
+    font-weight: 800;
+    color: $color-default-white;
+    margin-bottom: 25px;
+    z-index: 2;
+  }
+
+  & p {
+    max-width: 464px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 24px;
+    color: $color-default-white;
+    margin-bottom: 35px;
+  }
+
+  & a {
+    min-width: 220px;
+    padding: 21px 0;
+    width: fit-content;
+    text-align: center;
+    background-color: #0266c1;
+    color: $color-default-white;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 150px;
+
+    &:hover {
+      @include hover;
+      outline: 1px solid #1c3374;
+      background-color: $color-default-white;
+      color: #1c3374;
+    }
+
+    &:not(:disabled):focus {
+      @include focus;
+      outline: 1px solid #1c3374;
+      background-color: $color-default-white;
+      color: #1c3374;
+    }
+
+    &:active {
+      background-color: #1c3374;
+      color: $color-default-white;
+    }
+  }
+}
+
+.intro__slide-description {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.intro__slide-duration {
+  position: relative;
+  padding: 14px 20px 14px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: $color-default-white;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/svg/moon.svg");
+    width: 12px;
+    height: 12px;
+    top: 16.5px;
+    left: 20.5px;
+  }
+}
+
+.intro__slide-difficult {
+  position: relative;
+  padding: 14px 20px 14px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: $color-default-white;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/svg/level.svg");
+    width: 12px;
+    height: 12px;
+    top: 16.5px;
+    left: 21px;
+  }
+}
+
+.intro__slide-video {
+  position: absolute;
+  content: "";
+  top: 301px;
+  right: 0;
+  z-index: 1;
+  width: 482px;
+  min-height: 317px;
+
+  & iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border: 0;
+  }
+}
+
+.intro__slide-link {
+  & img {
+    position: absolute;
+    content: "";
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.intro__slide-button {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &:not(:disabled):hover {
+    @include hover;
+    border: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):hover svg {
+    stroke: #000000;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    border: 1px solid #1c3374;
+  }
+
+  &:not(:disabled):focus svg {
+    stroke: #000000;
+  }
+
+  &:not(:disabled):active {
+    @include active;
+    background-color: #1c3374;
+    border-color: #1c3374;
+  }
+
+  &:disabled {
+    opacity: 10%;
+    cursor: default;
+  }
+
+  & svg {
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    color: $color-default-white;
+  }
+}
+
+.swiper .intro__slider-pagination {
+  display: flex;
+  max-width: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  width: fit-content;
+  text-align: end;
+  left: auto;
+  right: 0;
+  gap: 7px;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-default-white;
+  background-color: transparent;
+  opacity: 1;
+  margin: 0;
+
+  &:not(:disabled):hover {
+    @include hover;
+    border: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):hover svg {
+    stroke: #000000;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    border: 1px solid #1c3374;
+  }
+
+  &:not(:disabled):focus svg {
+    stroke: #000000;
+  }
+
+  &:not(:disabled):active {
+    @include active;
+    background-color: #1c3374;
+    border-color: #1c3374;
+  }
+
+  &:disabled {
+    opacity: 10%;
+    cursor: default;
+  }
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background: $color-default-white;
+}
+
+.intro__slide-audio {
+  position: absolute;
+  width: fit-content;
+  top: 301px;
+  right: 0;
+
+  & iframe {
+    width: 340px;
+    height: 220px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .intro {
+    width: 100%;
+    min-height: 1024px;
+  }
+
+  .intro__slide {
+    background-size: cover;
+  }
+
+  .intro__slide-container {
+    position: relative;
+    padding: 174px 30px 90px;
+    max-width: 100%;
+    margin: 0;
+    min-height: 568px;
+  }
+
+  .intro__slide--kamchatka .intro__slide-container {
+    &::after {
+      background-size: cover;
+      width: 236px;
+      height: 312px;
+      top: inherit;
+      bottom: 169px;
+      right: 28%;
+      transform: translate(28%, 0);
+    }
+
+    &::before {
+      background-size: cover;
+      width: 266px;
+      height: 351px;
+      top: inherit;
+      bottom: 183px;
+      right: inherit;
+      left: 33%;
+      transform: translate(-33%, 0);
+    }
+  }
+
+  .intro__slide-text {
+    margin: 0 auto;
+    max-width: 670px;
+    width: 100%;
+    align-items: center;
+
+    & h3 {
+      font-size: 56px;
+      line-height: 56px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    & p {
+      text-align: center;
+      max-width: 462px;
+      margin-bottom: 25px;
+    }
+
+    & a {
+      min-width: 206px;
+      margin-bottom: 568px;
+    }
+  }
+
+  .intro__slide-description {
+    display: none;
+  }
+
+  .intro__slide-video {
+    top: inherit;
+    bottom: 218px;
+    right: 50%;
+    transform: translate(50%, 0);
+    z-index: 1;
+    width: 442px;
+    min-height: 300px;
+  }
+
+  .swiper .intro__slider-pagination {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+    left: 0;
+    bottom: 90px;
+    right: inherit;
+    margin: 0 auto;
+  }
+
+  .intro__slide-audio {
+    top: inherit;
+    bottom: 279px;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .intro {
+    min-height: 568px;
+  }
+
+  .intro__slide-container {
+    padding: 139px 15px 40px;
+  }
+
+  .intro__slide--kamchatka .intro__slide-container {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .intro__slide-text {
+    margin: 0;
+    max-width: 100%;
+
+    & h3 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    & p {
+      max-width: 100%;
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    & a {
+      min-width: 180px;
+      margin-bottom: 0;
+      padding: 18px;
+    }
+  }
+
+  .intro__slide-video {
+    display: none;
+  }
+
+  .swiper .intro__slider-pagination {
+    bottom: 40px;
+  }
+
+  .swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .intro__slide-audio {
+    display: none;
+  }
+}
