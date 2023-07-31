@@ -1,0 +1,205 @@
+.opinions {
+  overflow: hidden;
+}
+
+.opinions__container {
+  padding: 0 0 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.opinions__title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & h2 {
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 800;
+    color: #2d383f;
+    margin: 0;
+    padding-top: 19px;
+  }
+
+  & span {
+    position: absolute;
+    color: rgb(45, 56, 63, 0.03);
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 800;
+    top: 3px;
+  }
+}
+
+.opinions__buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.opinions__button {
+  display: flex;
+  width: 37px;
+  height: 35px;
+  background-color: #0266c1;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:disabled):hover {
+    @include hover;
+    outline: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):hover svg {
+    color: #1c3374;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    outline: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):focus svg {
+    color: #1c3374;
+  }
+
+  &:not(:disabled):active {
+    @include active;
+    background-color: #1c3374;
+  }
+
+  &:not(:disabled):active svg {
+    @include active;
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 10%;
+    cursor: default;
+  }
+}
+
+.opinions__button svg {
+  color: $color-default-white;
+}
+
+.opinions__slider {
+  width: 120%;
+}
+
+.swiper .opinions__wrapper {
+  padding: 20px 1px;
+}
+
+.opinions__slide {
+  padding: 20px 40px 20px 20px;
+  max-width: 790px;
+  display: flex;
+  gap: 30px;
+  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.1);
+}
+
+.opinions__picture {
+  min-width: 258px;
+  min-height: 253px;
+  background-color: #0266c1;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.opinions__text {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2d383f;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+}
+
+.opinions__name {
+  margin-top: auto;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  color: #2d383f;
+  margin-bottom: 8px;
+}
+
+.opinions__age {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  color: #2d383f;
+}
+
+@media (max-width: $tablet-width) {
+  .opinions__container {
+    padding: 40px 30px 35px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .opinions__title {
+    & h2 {
+      font-size: 25px;
+      line-height: 25px;
+      padding-top: 15px;
+    }
+
+    & span {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .opinions__slider {
+    max-width: 723px;
+  }
+
+  .swiper .opinions__wrapper {
+    padding: 20px 1px;
+  }
+
+  .opinions__slide {
+    padding: 20px 30px 20px 20px;
+    max-width: 560px;
+  }
+
+  .opinions__picture {
+    min-width: 186px;
+    min-height: 237px;
+  }
+
+  .opinions__text {
+    padding: 3px 0;
+
+    & p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .opinions__name {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 6px;
+  }
+}
