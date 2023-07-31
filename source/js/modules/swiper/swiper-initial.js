@@ -100,7 +100,6 @@ function swiperTrainersTurnOn() {
 }
 
 function swiperOpinionsTurnOn() {
-
   if (opinionsSlider) {
     // eslint-disable-next-line no-undef, no-unused-vars
     const swiper = new Swiper(opinionsSlider, {
