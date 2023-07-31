@@ -1,6 +1,7 @@
 const introSlider = document.querySelector('.intro__swiper');
 const toursSlider = document.querySelector('.tours__slider');
 const trainersSlider = document.querySelector('.trainers__slider');
+const opinionsSlider = document.querySelector('.opinions__slider');
 
 function swiperIntroTurnOn() {
 
@@ -98,4 +99,44 @@ function swiperTrainersTurnOn() {
   }
 }
 
-export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn};
+function swiperOpinionsTurnOn() {
+
+  if (opinionsSlider) {
+    // eslint-disable-next-line no-undef, no-unused-vars
+    const swiper = new Swiper(opinionsSlider, {
+      // effect: 'coverflow',
+      initialSlide: 0,
+      cssMode: true,
+      direction: 'horizontal',
+      loop: false,
+
+      breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          initialSlide: 0,
+        },
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          initialSlide: 0,
+        },
+      },
+
+      navigation: {
+        nextEl: '.opinions__button--next',
+        prevEl: '.opinions__button--prev',
+      },
+
+    });
+  }
+}
+
+export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn};
