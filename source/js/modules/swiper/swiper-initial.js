@@ -1,11 +1,12 @@
-const trainersSlider = document.querySelector('.intro__swiper');
+const introSlider = document.querySelector('.intro__swiper');
 const toursSlider = document.querySelector('.tours__slider');
+const trainersSlider = document.querySelector('.trainers__slider');
 
 function swiperIntroTurnOn() {
 
-  if (trainersSlider) {
+  if (introSlider) {
     // eslint-disable-next-line no-undef, no-unused-vars
-    const swiper = new Swiper(trainersSlider, {
+    const swiper = new Swiper(introSlider, {
       initialSlide: 0,
       cssMode: true,
       direction: 'horizontal',
@@ -58,4 +59,43 @@ function swiperToursTurnOn() {
   }
 }
 
-export {swiperIntroTurnOn, swiperToursTurnOn};
+function swiperTrainersTurnOn() {
+
+  if (trainersSlider) {
+    // eslint-disable-next-line no-undef, no-unused-vars
+    const swiper = new Swiper(trainersSlider, {
+      initialSlide: 0,
+      cssMode: true,
+      direction: 'horizontal',
+      loop: false,
+
+      breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          initialSlide: 0,
+        },
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          initialSlide: 0,
+        },
+      },
+
+      navigation: {
+        nextEl: '.trainers__button--next',
+        prevEl: '.trainers__button--prev',
+      },
+
+    });
+  }
+}
+
+export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn};
