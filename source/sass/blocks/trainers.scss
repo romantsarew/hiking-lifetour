@@ -503,7 +503,7 @@
 
     & li {
       position: relative;
-      max-width: 223px;
+      max-width: 100%;
       padding-left: 31px;
       padding-bottom: 0;
 
@@ -511,8 +511,9 @@
         display: block;
         width: 13px;
         height: 13px;
-        bottom: 9px;
-        left: -15%;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: -34px;
       }
     }
 
@@ -527,7 +528,6 @@
     content: "";
     width: 19px;
     height: 19px;
-    top: 8px;
     background-image: url("../../img/svg/map.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -539,7 +539,8 @@
     content: "";
     width: 19px;
     height: 19px;
-    top: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
     background-image: url("../../img/svg/boots.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -551,7 +552,8 @@
     content: "";
     width: 19px;
     height: 19px;
-    top: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
     background-image: url("../../img/svg/forest.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -563,7 +565,8 @@
     content: "";
     width: 19px;
     height: 19px;
-    top: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
     background-image: url("../../img/svg/mountain.svg");
     background-repeat: no-repeat;
     background-size: cover;
