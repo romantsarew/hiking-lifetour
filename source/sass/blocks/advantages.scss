@@ -1,0 +1,178 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+  padding: 56px 0 53px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/advantages-clouds.png");
+    background-repeat: no-repeat;
+    width: 1170px;
+    height: 391px;
+    top: -70%;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/advantages-clouds-small.png");
+    background-repeat: no-repeat;
+    width: 788px;
+    height: 263px;
+    top: -15%;
+    right: -13%;
+  }
+}
+
+.advantages__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  & h2 {
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 800;
+    color: #2d383f;
+    text-align: center;
+    margin: 0;
+  }
+
+  & span {
+    position: absolute;
+    color: rgb(45, 56, 63, 0.03);
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 800;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.advantages__buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.advantages__button {
+  display: flex;
+  width: 37px;
+  height: 35px;
+  background-color: #0266c1;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:disabled):hover {
+    @include hover;
+    outline: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):hover svg {
+    color: #1c3374;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    outline: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):focus svg {
+    color: #1c3374;
+  }
+
+  &:not(:disabled):active {
+    @include active;
+    background-color: #1c3374;
+  }
+
+  &:not(:disabled):active svg {
+    @include active;
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 10%;
+    cursor: default;
+  }
+}
+
+.advantages__button svg {
+  color: $color-default-white;
+}
+
+.advantages__slide {
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 124px 20px 40px;
+  min-height: 329px;
+
+  & h3 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #2d383f;
+  }
+
+  & p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #2d383f;
+    text-align: center;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    background-position: center;
+    border: 1px solid #0266c1;
+    width: 54px;
+    height: 54px;
+    top: 40px;
+  }
+
+  &--security {
+    &::after {
+      background-image: url("../../img/svg/security.svg");
+    }
+  }
+
+  &--knowledge {
+    &::after {
+      background-image: url("../../img/svg/knowledge.svg");
+    }
+  }
+
+  &--equipment {
+    &::after {
+      background-image: url("../../img/svg/equipment.svg");
+    }
+  }
+
+  &--trases {
+    &::after {
+      background-image: url("../../img/svg/trases.svg");
+    }
+  }
+
+  &--nature {
+    &::after {
+      background-image: url("../../img/svg/nature.svg");
+    }
+  }
+}

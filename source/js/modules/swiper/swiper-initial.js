@@ -2,6 +2,7 @@ const introSlider = document.querySelector('.intro__swiper');
 const toursSlider = document.querySelector('.tours__slider');
 const trainersSlider = document.querySelector('.trainers__slider');
 const opinionsSlider = document.querySelector('.opinions__slider');
+const advantagesSlider = document.querySelector('.advantages__slider')
 
 function swiperIntroTurnOn() {
 
@@ -103,7 +104,6 @@ function swiperOpinionsTurnOn() {
   if (opinionsSlider) {
     // eslint-disable-next-line no-undef, no-unused-vars
     const swiper = new Swiper(opinionsSlider, {
-      // effect: 'coverflow',
       initialSlide: 0,
       cssMode: true,
       direction: 'horizontal',
@@ -112,12 +112,13 @@ function swiperOpinionsTurnOn() {
       breakpoints: {
         // when window width is >= 1200px
         1200: {
-          slidesPerView: 1,
+          centeredSlides: true,
+          slidesPerView: 'auto',
           spaceBetween: 30,
         },
         // when window width is >= 768px
         768: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 30,
           initialSlide: 0,
         },
@@ -138,4 +139,38 @@ function swiperOpinionsTurnOn() {
   }
 }
 
-export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn};
+function swiperAdvantagesTurnOn() {
+  if (advantagesSlider) {
+    // eslint-disable-next-line no-undef, no-unused-vars
+    const swiper = new Swiper(advantagesSlider, {
+      cssMode: true,
+      direction: 'horizontal',
+      loop: false,
+
+      breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+          initialSlide: 3,
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        },
+        // when window width is >= 768px
+        768: {
+          init: false,
+        },
+        // when window width is >= 320px
+        320: {
+          init: false,
+        },
+      },
+
+      navigation: {
+        nextEl: '.advantages__button--next',
+        prevEl: '.advantages__button--prev',
+      },
+
+    });
+  }
+}
+
+export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn};
