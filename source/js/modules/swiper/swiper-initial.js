@@ -103,7 +103,6 @@ function swiperOpinionsTurnOn() {
   if (opinionsSlider) {
     // eslint-disable-next-line no-undef, no-unused-vars
     const swiper = new Swiper(opinionsSlider, {
-      // effect: 'coverflow',
       initialSlide: 0,
       cssMode: true,
       direction: 'horizontal',
@@ -112,12 +111,13 @@ function swiperOpinionsTurnOn() {
       breakpoints: {
         // when window width is >= 1200px
         1200: {
-          slidesPerView: 1,
+          centeredSlides: true,
+          slidesPerView: 'auto',
           spaceBetween: 30,
         },
         // when window width is >= 768px
         768: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 30,
           initialSlide: 0,
         },
