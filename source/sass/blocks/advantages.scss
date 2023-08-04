@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   gap: 50px;
-  padding: 56px 0 53px;
+  padding: 113px 0 53px;
   overflow: hidden;
 
   &::before {
@@ -14,8 +14,9 @@
     background-repeat: no-repeat;
     width: 1170px;
     height: 391px;
-    top: -70%;
+    top: -20%;
     left: 0;
+    z-index: 10000000;
   }
 
   &::after {
@@ -25,8 +26,9 @@
     background-repeat: no-repeat;
     width: 788px;
     height: 263px;
-    top: -15%;
+    top: 60px;
     right: -13%;
+    z-index: 0;
   }
 }
 
@@ -126,6 +128,7 @@
   padding: 124px 20px 40px;
   min-height: 329px;
   gap: 15px;
+  background-color: $color-default-white;
 
   & h3 {
     font-size: 18px;
