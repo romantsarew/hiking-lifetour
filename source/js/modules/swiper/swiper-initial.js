@@ -2,7 +2,8 @@ const introSlider = document.querySelector('.intro__swiper');
 const toursSlider = document.querySelector('.tours__slider');
 const trainersSlider = document.querySelector('.trainers__slider');
 const opinionsSlider = document.querySelector('.opinions__slider');
-const advantagesSlider = document.querySelector('.advantages__slider')
+const advantagesSlider = document.querySelector('.advantages__slider');
+const fotoSlider = document.querySelector('.foto__slider');
 
 function swiperIntroTurnOn() {
 
@@ -158,4 +159,29 @@ function swiperAdvantagesTurnOn() {
   }
 }
 
-export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn};
+function swiperFotoTurnOn() {
+  if (fotoSlider) {
+    // eslint-disable-next-line no-undef, no-unused-vars
+    const swiper = new Swiper(fotoSlider, {
+      loop: false,
+      spaceBetween: 5,
+      slidesPerView: 'auto',
+
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          spaceBetween: 3,
+        },
+      },
+
+      navigation: {
+        nextEl: '.foto__button--next',
+        prevEl: '.foto__button--prev',
+      },
+
+    });
+  }
+}
+
+
+export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn, swiperFotoTurnOn};
