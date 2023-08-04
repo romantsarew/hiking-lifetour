@@ -146,10 +146,8 @@ function swiperAdvantagesTurnOn() {
     const swiper = new Swiper(advantagesSlider, {
       centeredSlides: true,
       slidesPerView: 'auto',
-      initialSlide: 1,
+      initialSlide: 4,
       spaceBetween: 30,
-      cssMode: true,
-      direction: 'horizontal',
       loop: true,
 
       navigation: {
