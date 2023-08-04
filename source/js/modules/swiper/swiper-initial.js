@@ -140,35 +140,22 @@ function swiperOpinionsTurnOn() {
 }
 
 function swiperAdvantagesTurnOn() {
-  if (advantagesSlider) {
+  const width = window.innerWidth;
+  if (width > 1200) {
     // eslint-disable-next-line no-undef, no-unused-vars
     const swiper = new Swiper(advantagesSlider, {
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: 1,
+      spaceBetween: 30,
       cssMode: true,
       direction: 'horizontal',
-      loop: false,
-
-      breakpoints: {
-        // when window width is >= 1200px
-        1200: {
-          initialSlide: 3,
-          slidesPerView: 'auto',
-          spaceBetween: 30,
-        },
-        // when window width is >= 768px
-        768: {
-          init: false,
-        },
-        // when window width is >= 320px
-        320: {
-          init: false,
-        },
-      },
+      loop: true,
 
       navigation: {
         nextEl: '.advantages__button--next',
         prevEl: '.advantages__button--prev',
       },
-
     });
   }
 }
