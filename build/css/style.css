@@ -4475,6 +4475,411 @@ button,
     max-width: 172px;
   }
 }
+.form {
+  background-image: url("../../img/form.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}
+
+.form__container {
+  padding: 307px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__container h2 {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.form__container span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 42px;
+}
+
+.form__wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.form__name,
+.form__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.form__name span,
+.form__tel span {
+  margin: 0;
+}
+.form__name .input-message.is-invalid,
+.form__tel .input-message.is-invalid {
+  position: absolute;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ff121f;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: -25px;
+}
+.form__name .input-message.is-valid,
+.form__tel .input-message.is-valid {
+  position: absolute;
+  font-size: 14px;
+  line-height: 22px;
+  color: #15ab07;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: -25px;
+}
+.form__name input,
+.form__tel input {
+  width: 340px;
+  height: 64px;
+  padding: 24px 30px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form__name input::-webkit-input-placeholder, .form__tel input::-webkit-input-placeholder {
+  color: rgba(45, 56, 63, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.form__name input::-moz-placeholder, .form__tel input::-moz-placeholder {
+  color: rgba(45, 56, 63, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.form__name input:-ms-input-placeholder, .form__tel input:-ms-input-placeholder {
+  color: rgba(45, 56, 63, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.form__name input::-ms-input-placeholder, .form__tel input::-ms-input-placeholder {
+  color: rgba(45, 56, 63, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.form__name input::placeholder,
+.form__tel input::placeholder {
+  color: rgba(45, 56, 63, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.form__name input:hover:not(:disabled),
+.form__tel input:hover:not(:disabled) {
+  border-color: #0266c1;
+}
+.form__name input:hover::-webkit-input-placeholder, .form__tel input:hover::-webkit-input-placeholder {
+  color: #0266c1;
+}
+.form__name input:hover::-moz-placeholder, .form__tel input:hover::-moz-placeholder {
+  color: #0266c1;
+}
+.form__name input:hover:-ms-input-placeholder, .form__tel input:hover:-ms-input-placeholder {
+  color: #0266c1;
+}
+.form__name input:hover::-ms-input-placeholder, .form__tel input:hover::-ms-input-placeholder {
+  color: #0266c1;
+}
+.form__name input:hover::placeholder,
+.form__tel input:hover::placeholder {
+  color: #0266c1;
+}
+.form__name input:active:not(:disabled),
+.form__tel input:active:not(:disabled) {
+  border-color: #1c3374;
+}
+.form__name input:active::-webkit-input-placeholder, .form__tel input:active::-webkit-input-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:active::-moz-placeholder, .form__tel input:active::-moz-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:active:-ms-input-placeholder, .form__tel input:active:-ms-input-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:active::-ms-input-placeholder, .form__tel input:active::-ms-input-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:active::placeholder,
+.form__tel input:active::placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:focus:not(:disabled),
+.form__tel input:focus:not(:disabled) {
+  border-color: #1c3374;
+}
+.form__name input:focus::-webkit-input-placeholder, .form__tel input:focus::-webkit-input-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:focus::-moz-placeholder, .form__tel input:focus::-moz-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:focus:-ms-input-placeholder, .form__tel input:focus:-ms-input-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:focus::-ms-input-placeholder, .form__tel input:focus::-ms-input-placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:focus::placeholder,
+.form__tel input:focus::placeholder {
+  color: rgba(45, 56, 63, 0);
+}
+.form__name input:disabled,
+.form__tel input:disabled {
+  border-color: rgba(2, 102, 193, 0.1);
+  background-color: #ffffff;
+}
+.form__name input:disabled::-webkit-input-placeholder, .form__tel input:disabled::-webkit-input-placeholder {
+  color: rgba(2, 102, 193, 0.1);
+}
+.form__name input:disabled::-moz-placeholder, .form__tel input:disabled::-moz-placeholder {
+  color: rgba(2, 102, 193, 0.1);
+}
+.form__name input:disabled:-ms-input-placeholder, .form__tel input:disabled:-ms-input-placeholder {
+  color: rgba(2, 102, 193, 0.1);
+}
+.form__name input:disabled::-ms-input-placeholder, .form__tel input:disabled::-ms-input-placeholder {
+  color: rgba(2, 102, 193, 0.1);
+}
+.form__name input:disabled::placeholder,
+.form__tel input:disabled::placeholder {
+  color: rgba(2, 102, 193, 0.1);
+}
+.form__name input:invalid:not(:-moz-placeholder-shown), .form__tel input:invalid:not(:-moz-placeholder-shown) {
+  border-color: #ff121f;
+}
+.form__name input:invalid:not(:-ms-input-placeholder), .form__tel input:invalid:not(:-ms-input-placeholder) {
+  border-color: #ff121f;
+}
+.form__name input:invalid:not(:placeholder-shown),
+.form__tel input:invalid:not(:placeholder-shown) {
+  border-color: #ff121f;
+}
+
+.form__button {
+  width: 238px;
+  min-height: 64px;
+  background-color: #0266c1;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.form__button:not(:disabled):hover {
+  outline: 1px solid #1c3374;
+  background-color: #ffffff;
+  color: #1c3374;
+}
+.form__button:not(:disabled):focus {
+  outline: 1px solid #1c3374;
+  background-color: #ffffff;
+  color: #1c3374;
+}
+.form__button:not(:disabled):active {
+  background-color: #1c3374;
+  color: #ffffff;
+}
+.form__button:disabled {
+  background-color: rgba(2, 102, 193, 0.1);
+  cursor: not-allowed;
+}
+
+@media (max-width: 1199px) {
+  .form {
+    background-image: url("../../img/form-tablet.jpg");
+    min-height: 679px;
+  }
+  .form__container {
+    padding: 192px 0 183px;
+  }
+  .form__container h2 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+  .form__container span {
+    margin-bottom: 30px;
+    max-width: 295px;
+  }
+  .form__wrapper form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+  }
+  .form__name {
+    margin-bottom: 7px;
+  }
+  .form__tel {
+    margin-bottom: 15px;
+  }
+  .form__name .input-message.is-invalid,
+.form__tel .input-message.is-invalid {
+    position: static;
+  }
+  .form__name .input-message.is-valid,
+.form__tel .input-message.is-valid {
+    position: static;
+  }
+  .form__name input,
+.form__tel input {
+    width: 266px;
+    height: 50px;
+    padding: 18px 15px;
+  }
+  .form__name input::-webkit-input-placeholder, .form__tel input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input::-moz-placeholder, .form__tel input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input:-ms-input-placeholder, .form__tel input:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input::-ms-input-placeholder, .form__tel input::-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input::placeholder,
+.form__tel input::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__button {
+    width: 266px;
+    min-height: 58px;
+  }
+}
+@media (max-width: 767px) {
+  .form {
+    background-position: -140px 0;
+    min-height: 621px;
+  }
+  .form__container {
+    padding: 181px 0 175px;
+  }
+  .form__container h2 {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 14px;
+  }
+  .form__container span {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 26px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .form__wrapper {
+    width: 100%;
+  }
+  .form__wrapper form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+  }
+  .form__name {
+    margin-bottom: 7px;
+  }
+  .form__tel {
+    margin-bottom: 8px;
+  }
+  .form__name .input-message.is-invalid,
+.form__tel .input-message.is-invalid {
+    position: static;
+  }
+  .form__name .input-message.is-valid,
+.form__tel .input-message.is-valid {
+    position: static;
+  }
+  .form__name input,
+.form__tel input {
+    width: 100%;
+    height: 50px;
+    padding: 18px 15px;
+  }
+  .form__name input::-webkit-input-placeholder, .form__tel input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input::-moz-placeholder, .form__tel input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input:-ms-input-placeholder, .form__tel input:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input::-ms-input-placeholder, .form__tel input::-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__name input::placeholder,
+.form__tel input::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .form__button {
+    width: 100%;
+    min-height: 52px;
+  }
+}
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {

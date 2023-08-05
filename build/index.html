@@ -823,6 +823,33 @@
           </div>
         </div>
       </section>
+      <section class="form">
+        <div class="container">
+          <div class="form__container">
+            <h2>Остались вопросы?</h2>
+            <span>Заполните форму и наш оператор свяжется с вами для консультации.</span>
+            <div class="form__wrapper" data-form-validate data-callback="base">
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__name" data-validate-type="text" data-limitation="name"
+                  data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
+                  data-required>
+                  <label for="name">
+                    <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+                  </label>
+                </div>
+                <div class="form__tel" data-validate-type="phone" data-on-input-validate
+                  data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
+                  data-message-success="Поле заполнено верно" data-required data-phone-length="18">
+                  <label for="tel">
+                    <input type="tel" id="tel" name="tel" placeholder="Телефон" required>
+                  </label>
+                </div>
+                <button class="form__button" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
