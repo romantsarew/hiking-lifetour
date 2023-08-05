@@ -1,8 +1,9 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { Form } from './modules/form-validate/form';
-import { burgerMenuInit } from './modules/burger/burger-init';
-import { swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn, swiperFotoTurnOn } from './modules/swiper/swiper-initial';
-import { findVideos } from './modules/video/init-video';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {Form} from './modules/form-validate/form';
+import {burgerMenuInit} from './modules/burger/burger-init';
+import {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn, swiperFotoTurnOn} from './modules/swiper/swiper-initial';
+import {findVideos} from './modules/video/init-video';
+import {mapInit} from './modules/map/map-init';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   swiperOpinionsTurnOn();
   swiperAdvantagesTurnOn();
   swiperFotoTurnOn();
+  mapInit();
   findVideos();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
