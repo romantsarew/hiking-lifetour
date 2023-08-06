@@ -6,10 +6,14 @@
     content: "";
     width: 808px;
     height: 474px;
-    background-image: url("../../img/about-image.png");
+    background-image: url("../img/about-image.webp");
     background-size: cover;
-    top: 88px;
+    top: 95px;
     z-index: -1;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-image@2x.webp");
+    }
   }
 
   &::after {
@@ -17,16 +21,20 @@
     content: "";
     width: 610px;
     height: 280px;
-    background-image: url("../../img/about-clouds.png");
+    background-image: url("../img/about-clouds.webp");
     background-size: cover;
     top: -70px;
     right: 0;
     z-index: -1;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-clouds@2x.webp");
+    }
   }
 }
 
 .about__container {
-  padding: 88px 0 30px;
+  padding: 130px 0 30px;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 600px;
@@ -35,7 +43,7 @@
 .about__text {
   display: flex;
   flex-direction: column;
-  padding-left: 52%;
+  padding-left: 51.2%;
   position: relative;
 
   & h2 {
@@ -44,7 +52,7 @@
     line-height: 35px;
     font-weight: 800;
     margin: 0;
-    margin-bottom: 58px;
+    margin-bottom: 57px;
     color: #2d383f;
   }
 
@@ -63,7 +71,7 @@
     line-height: 21px;
     font-weight: 700;
     color: #2d383f;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   & p {
@@ -72,7 +80,7 @@
     line-height: 22px;
     color: #2d383f;
     font-weight: 400;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
 
     &:last-child {
       margin-bottom: 0;
@@ -85,13 +93,16 @@
     position: relative;
 
     &::before {
-      width: 685px;
+      width: 475px;
       height: 402px;
-      top: 0;
+      top: 60px;
       left: 0;
-      background-image: url("../../img/about-image-tablet.png");
-      background-size: auto;
+      background-image: url("../img/about-image-tablet.webp");
       background-repeat: no-repeat;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-image-tablet@2x.webp");
+      }
     }
 
     &::after {
@@ -100,23 +111,22 @@
   }
 
   .about__container {
-    padding: 35px 30px;
+    padding: 55px 30px 35px;
     max-width: 100%;
     margin: 0;
-    min-height: auto;
     min-height: 461px;
   }
 
   .about__text {
     display: flex;
     flex-direction: column;
-    padding-left: 52%;
+    padding-left: 52.2%;
     position: relative;
 
     & h2 {
       font-size: 25px;
       line-height: 25px;
-      margin-bottom: 36px;
+      margin-bottom: 33px;
     }
 
     & span {
@@ -171,6 +181,7 @@
 
     & p {
       line-height: 20px;
+      margin-bottom: 43px;
     }
   }
 }

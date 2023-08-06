@@ -168,6 +168,14 @@ function swiperFotoTurnOn() {
       slidesPerView: 'auto',
 
       breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+          spaceBetween: 5,
+        },
+        // when window width is >= 768px
+        768: {
+          spaceBetween: 5,
+        },
         // when window width is >= 320px
         320: {
           spaceBetween: 3,

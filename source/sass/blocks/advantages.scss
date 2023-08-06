@@ -3,32 +3,43 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  gap: 50px;
-  padding: 113px 0 53px;
+  gap: 48px;
+  padding: 111px 0 53px;
   overflow: hidden;
 
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/advantages-clouds.png");
+    background-image: url("../img/advantages-clouds.webp");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     width: 1170px;
     height: 391px;
-    top: -20%;
-    left: 0;
-    z-index: 10000000;
+    top: -130px;
+    left: -16%;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantages-clouds@2x.webp");
+    }
   }
 
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/advantages-clouds-small.png");
+    background-image: url("../../img/advantages-clouds-small.webp");
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 788px;
     height: 263px;
-    top: 60px;
-    right: -13%;
+    top: 50px;
+    right: -95px;
     z-index: 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantages-clouds-small@2x.webp");
+    }
   }
 }
 
@@ -109,6 +120,10 @@
   }
 }
 
+.advantages__wrapper {
+  margin-left: -5px;
+}
+
 .advantages__button svg {
   color: $color-default-white;
 }
@@ -119,7 +134,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 124px 20px 40px;
+  padding: 123px 19px 39px;
   min-height: 329px;
   gap: 15px;
   background-color: $color-default-white;
@@ -233,7 +248,7 @@
 
   .advantages__slide {
     max-width: 100%;
-    padding: 103px 20px 30px;
+    padding: 102px 20px 29px;
     min-height: 272px;
     place-self: center;
 
@@ -265,7 +280,8 @@
 
 @media (max-width: $mobile-width) {
   .advantages {
-    padding: 30px 0 30px;
+    padding: 2px 0 30px;
+    gap: 30px;
   }
 
   .advantages__container {
@@ -296,8 +312,8 @@
 
   .advantages__slide {
     max-width: 100%;
-    padding: 87px 10px 20px;
-    min-height: 290px;
+    padding: 86px 10px 19px;
+    min-height: 244px;
 
     & h3 {
       font-size: 14px;
