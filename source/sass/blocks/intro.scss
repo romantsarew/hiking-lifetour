@@ -28,43 +28,73 @@
 
 .intro__slide-container {
   position: relative;
-  padding: 182px 15px 80px;
+  padding: 182px 0 78px;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 800px;
 }
 
 .intro__slide--caucasus {
-  background-image: url("../img/intro/caucasus.jpg");
+  background-image: url("../img/intro/caucasus.webp");
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro/caucasus@2x.webp");
+    background-size: cover;
+  }
 }
 
 .intro__slide--kamchatka {
-  background-image: url("../img/intro/kamchatka.jpg");
+  background-image: url("../img/intro/kamchatka.webp");
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro/kamchatka@2x.webp");
+    background-size: cover;
+  }
 }
 
 .intro__slide--altai {
-  background-image: url("../img/intro/altai.jpg");
+  background-image: url("../img/intro/altai.webp");
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro/altai@2x.webp");
+    background-size: cover;
+  }
 }
 
 .intro__slide--kamchatka .intro__slide-container {
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../img/intro/photo-2.png");
+    background-image: url("../img/intro/photo-2.webp");
+    background-size: cover;
     width: 277px;
     height: 366px;
     top: 295px;
     right: 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro/photo-2@2x.webp");
+      background-size: cover;
+    }
   }
 
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/intro/photo-1.png");
+    background-image: url("../img/intro/photo-1.webp");
+    background-size: cover;
     width: 308px;
     height: 407px;
     top: 202px;
     right: 100px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro/photo-1@2x.webp");
+      background-size: cover;
+    }
   }
 }
 
@@ -80,7 +110,7 @@
     line-height: 77px;
     font-weight: 800;
     color: $color-default-white;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
     z-index: 2;
   }
 
@@ -90,12 +120,12 @@
     font-size: 17px;
     line-height: 24px;
     color: $color-default-white;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
   }
 
   & a {
     min-width: 220px;
-    padding: 21px 0;
+    padding: 21px 5px;
     width: fit-content;
     text-align: center;
     background-color: #0266c1;
@@ -103,7 +133,7 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: 500;
-    margin-bottom: 150px;
+    margin-bottom: 149px;
 
     &:hover {
       @include hover;
@@ -147,7 +177,7 @@
     background-image: url("../img/svg/moon.svg");
     width: 12px;
     height: 12px;
-    top: 16.5px;
+    top: 16px;
     left: 20.5px;
   }
 }
@@ -167,8 +197,8 @@
     background-image: url("../img/svg/level.svg");
     width: 12px;
     height: 12px;
-    top: 16.5px;
-    left: 21px;
+    top: 16px;
+    left: 18px;
   }
 }
 
@@ -180,6 +210,7 @@
   z-index: 1;
   width: 482px;
   min-height: 317px;
+  background-color: #0266c1;
 
   & iframe {
     position: absolute;
@@ -255,11 +286,11 @@
   display: flex;
   max-width: 100px;
   flex-wrap: wrap;
-  margin-bottom: 80px;
+  margin-bottom: 87px;
   width: fit-content;
   text-align: end;
   left: auto;
-  right: 0;
+  right: -4px;
   gap: 7px;
 }
 
@@ -283,6 +314,7 @@
 
   &:not(:disabled):focus {
     @include focus;
+    outline: none;
     border: 1px solid #1c3374;
   }
 
@@ -380,7 +412,7 @@
 
     & a {
       min-width: 206px;
-      margin-bottom: 568px;
+      margin-bottom: 478px;
     }
   }
 
@@ -399,7 +431,6 @@
   }
 
   .swiper .intro__slider-pagination {
-    margin-bottom: 0;
     width: 100%;
     max-width: 100%;
     text-align: center;
@@ -424,7 +455,7 @@
   }
 
   .intro__slide-container {
-    padding: 139px 15px 40px;
+    padding: 139px 15px 48px;
   }
 
   .intro__slide--kamchatka .intro__slide-container {
@@ -466,6 +497,7 @@
 
   .swiper .intro__slider-pagination {
     bottom: 40px;
+    gap: 4px;
   }
 
   .swiper .swiper-pagination-bullet {

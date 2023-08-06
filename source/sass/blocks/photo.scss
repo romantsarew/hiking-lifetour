@@ -1,0 +1,276 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  padding: 78px 0 0;
+}
+
+.photo__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  & h2 {
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 800;
+    color: #2d383f;
+    margin: 0;
+  }
+
+  & span {
+    position: absolute;
+    color: rgb(45, 56, 63, 0.03);
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 800;
+    top: -15px;
+    left: 0;
+  }
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & p {
+    max-width: 694px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d383f;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.photo__buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.photo__button {
+  display: flex;
+  width: 37px;
+  height: 35px;
+  background-color: #0266c1;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:disabled):hover {
+    @include hover;
+    outline: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):hover svg {
+    color: #1c3374;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    outline: 1px solid #1c3374;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):focus svg {
+    color: #1c3374;
+  }
+
+  &:not(:disabled):active {
+    @include active;
+    background-color: #1c3374;
+  }
+
+  &:not(:disabled):active svg {
+    @include active;
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 10%;
+    cursor: default;
+  }
+}
+
+.photo__slider {
+  width: 100%;
+}
+
+.photo__wrapper {
+  gap: 5px;
+}
+
+.photo__button svg {
+  color: $color-default-white;
+}
+
+.photo__slide {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: fit-content;
+  min-height: 449px;
+
+  & img {
+    object-fit: cover;
+    min-height: 100%;
+  }
+}
+
+.photo__slide-container {
+  display: flex;
+  min-width: 272px;
+  min-height: 179px;
+  background-color: #0266c1;
+  gap: 5px;
+  flex-direction: column;
+  max-width: 298px;
+}
+
+.photo__slide-container--small {
+  min-width: 298px;
+  min-height: 179px;
+  background-color: #0266c1;
+  max-width: 298px;
+}
+
+.photo__slide-container--medium {
+  min-width: 298px;
+  min-height: 265px;
+  background-color: #0266c1;
+  max-width: 265px;
+}
+
+@media (max-width: $tablet-width) {
+  .photo {
+    gap: 36px;
+    padding: 50px 0 0;
+  }
+
+  .photo__container {
+    gap: 24px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 30px;
+
+    & h2 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    & span {
+      font-size: 40px;
+      line-height: 40px;
+      top: -10px;
+      left: 30px;
+    }
+
+    & div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & p {
+      max-width: 395px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .photo__buttons {
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .photo {
+    gap: 9px;
+    padding: 36px 0 0;
+  }
+
+  .photo__container {
+    gap: 15px;
+    padding: 0;
+
+    & h2 {
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    & span {
+      font-size: 26px;
+      line-height: 26px;
+      top: -3px;
+      left: 0;
+    }
+
+    & div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & p {
+      max-width: 100%;
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .photo .photo__buttons {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  .photo__wrapper {
+    gap: 3px;
+  }
+
+  .photo__slide {
+    max-width: 159px;
+    min-height: 259px;
+    gap: 3px;
+
+    & img {
+      object-fit: cover;
+      min-height: 100%;
+    }
+  }
+
+  .photo__slide-container {
+    min-width: 159px;
+    min-height: 259px;
+    background-color: #0266c1;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    max-width: 172px;
+  }
+
+  .photo__slide-container--small {
+    min-width: 158px;
+    min-height: 103px;
+    max-width: 158px;
+
+    & img {
+      min-height: 103px;
+    }
+  }
+
+  .photo__slide-container--medium {
+    min-width: 158px;
+    min-height: 153px;
+    max-width: 158px;
+
+    & img {
+      min-height: 153px;
+    }
+  }
+}

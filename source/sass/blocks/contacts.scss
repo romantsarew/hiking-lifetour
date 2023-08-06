@@ -1,5 +1,5 @@
 .contacts__container {
-  padding: 60px 0 104px;
+  padding: 64px 0 102px;
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
@@ -9,7 +9,7 @@
 .contacts__text {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 48px;
   max-width: 483px;
 }
 
@@ -59,6 +59,26 @@
   position: relative;
   display: block;
   padding-left: 56px;
+  color: #2d383f;
+
+  &:hover dt,
+  &:hover dd {
+    color: #1c3374;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus dt,
+  &:focus dd {
+    color: #1c3374;
+  }
+
+  &:active dt,
+  &:active dd {
+    color: #0266c1;
+  }
 
   &::before {
     position: absolute;
@@ -97,33 +117,35 @@
 
 .contacts__link--tel {
   &::before {
-    background-image: url("../../img/svg/phone.svg");
+    background-image: url("../img/svg/phone.svg");
     background-size: 24px 24px;
   }
 }
 
 .contacts__link--mail {
   &::before {
-    background-image: url("../../img/svg/mail.svg");
+    background-image: url("../img/svg/mail.svg");
     background-size: 24px 17px;
   }
 }
+
 .contacts__link--address {
   &::before {
-    background-image: url("../../img/svg/point.svg");
+    background-image: url("../img/svg/point.svg");
     background-size: 18px 24px;
   }
 }
 
 .contacts__map {
-  margin-top: 98px;
+  margin-top: 94px;
   width: 585px;
   height: 324px;
+  outline: none;
 }
 
 @media (max-width: $tablet-width) {
   .contacts__container {
-    padding: 70px 30px;
+    padding: 73px 30px 69px;
     flex-direction: column;
     max-width: 100%;
     margin: 0;
@@ -135,7 +157,7 @@
   }
 
   .contacts__title {
-    gap: 25px;
+    gap: 20px;
 
     & h2 {
       font-size: 25px;
@@ -196,6 +218,7 @@
       background-size: 22px 16px;
     }
   }
+
   .contacts__link--address {
     &::before {
       background-size: 17px 22px;
@@ -203,7 +226,7 @@
   }
 
   .contacts__map {
-    margin-top: 40px;
+    margin-top: 37px;
     width: 100%;
     min-height: 340px;
 
@@ -217,7 +240,7 @@
 
 @media (max-width: $mobile-width) {
   .contacts__container {
-    padding: 60px 0 30px;
+    padding: 58px 0 24px;
   }
 
   .contacts__text {
@@ -284,8 +307,10 @@
       background-size: 20px 14px;
     }
   }
+
   .contacts__link--address {
     max-width: 200px;
+
     &::before {
       background-size: 15px 20px;
     }
