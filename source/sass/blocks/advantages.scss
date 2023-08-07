@@ -27,7 +27,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/advantages-clouds-small.webp");
+    background-image: url("../img/advantages-clouds-small.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -170,31 +170,31 @@
 
   &--security {
     &::after {
-      background-image: url("../../img/svg/security.svg");
+      background-image: url("../img/svg/security.svg");
     }
   }
 
   &--knowledge {
     &::after {
-      background-image: url("../../img/svg/knowledge.svg");
+      background-image: url("../img/svg/knowledge.svg");
     }
   }
 
   &--equipment {
     &::after {
-      background-image: url("../../img/svg/equipment.svg");
+      background-image: url("../img/svg/equipment.svg");
     }
   }
 
   &--trases {
     &::after {
-      background-image: url("../../img/svg/trases.svg");
+      background-image: url("../img/svg/trases.svg");
     }
   }
 
   &--nature {
     &::after {
-      background-image: url("../../img/svg/nature.svg");
+      background-image: url("../img/svg/nature.svg");
     }
   }
 }

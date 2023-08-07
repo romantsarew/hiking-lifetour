@@ -4938,7 +4938,7 @@ button,
 .advantages::after {
   position: absolute;
   content: "";
-  background-image: url("../../img/advantages-clouds-small.webp");
+  background-image: url("../img/advantages-clouds-small.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5081,19 +5081,19 @@ button,
   top: 40px;
 }
 .advantages__slide--security::after {
-  background-image: url("../../img/svg/security.svg");
+  background-image: url("../img/svg/security.svg");
 }
 .advantages__slide--knowledge::after {
-  background-image: url("../../img/svg/knowledge.svg");
+  background-image: url("../img/svg/knowledge.svg");
 }
 .advantages__slide--equipment::after {
-  background-image: url("../../img/svg/equipment.svg");
+  background-image: url("../img/svg/equipment.svg");
 }
 .advantages__slide--trases::after {
-  background-image: url("../../img/svg/trases.svg");
+  background-image: url("../img/svg/trases.svg");
 }
 .advantages__slide--nature::after {
-  background-image: url("../../img/svg/nature.svg");
+  background-image: url("../img/svg/nature.svg");
 }
 
 @media (max-width: 1199px) {
