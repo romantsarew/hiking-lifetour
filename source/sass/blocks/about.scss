@@ -54,15 +54,16 @@
     margin: 0;
     margin-bottom: 57px;
     color: #2d383f;
-  }
 
-  & [data-content]:before {
-    position: absolute;
-    color: rgb(45, 56, 63, 0.03);
-    font-size: 55px;
-    line-height: 55px;
-    font-weight: 800;
-    top: -15px;
+    &::before {
+      position: absolute;
+      content: attr(data-content);
+      color: rgb(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      font-weight: 800;
+      top: -15px;
+    }
   }
 
   & h3 {
@@ -127,12 +128,12 @@
       font-size: 25px;
       line-height: 25px;
       margin-bottom: 35px;
-    }
 
-    & [data-content]:before {
-      font-size: 40px;
-      line-height: 40px;
-      top: -11px;
+      &::before {
+        font-size: 40px;
+        line-height: 40px;
+        top: -11px;
+      }
     }
 
     & h3 {
@@ -166,12 +167,12 @@
       font-size: 22px;
       line-height: 22px;
       margin-bottom: 33px;
-    }
 
-    & [data-content]:before {
-      font-size: 26px;
-      line-height: 26px;
-      top: -2px;
+      &::before {
+        font-size: 26px;
+        line-height: 26px;
+        top: -3px;
+      }
     }
 
     & h3 {
