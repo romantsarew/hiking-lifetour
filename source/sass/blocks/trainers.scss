@@ -23,13 +23,13 @@
   color: #2d383f;
 }
 
-.trainers__shadow {
+[data-content]:before {
   position: absolute;
   color: rgb(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
   font-weight: 800;
-  top: -15px;
+  top: -17px;
 }
 
 .trainers__description {
@@ -213,23 +213,12 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  padding-bottom: 32px;
 
   & li {
     position: relative;
     max-width: 277px;
     padding-left: 40px;
-    padding-bottom: 32px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-color: #0266c1;
-      bottom: -7px;
-      border-radius: 50%;
-      left: 0;
-    }
   }
 
   & p {
@@ -241,48 +230,100 @@
   }
 }
 
-.trainers__item--map::before {
-  position: absolute;
-  content: "";
-  width: 25px;
-  height: 25px;
-  top: 10px;
-  background-image: url("../img/svg/map.svg");
-  background-repeat: no-repeat;
-  left: 0;
+.trainers__item--map {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    background-image: url("../img/svg/map.svg");
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #0266c1;
+    bottom: -39px;
+    border-radius: 50%;
+    left: 0;
+  }
 }
 
-.trainers__item--boots::before {
-  position: absolute;
-  content: "";
-  width: 25px;
-  height: 25px;
-  top: 10px;
-  background-image: url("../img/svg/boots.svg");
-  background-repeat: no-repeat;
-  left: 0;
+.trainers__item--boots {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    background-image: url("../img/svg/boots.svg");
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #0266c1;
+    bottom: -39px;
+    border-radius: 50%;
+    left: 0;
+  }
 }
 
-.trainers__item--forest::before {
-  position: absolute;
-  content: "";
-  width: 25px;
-  height: 25px;
-  top: 10px;
-  background-image: url("../img/svg/forest.svg");
-  background-repeat: no-repeat;
-  left: 0;
+.trainers__item--forest {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    background-image: url("../img/svg/forest.svg");
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #0266c1;
+    bottom: -39px;
+    border-radius: 50%;
+    left: 0;
+  }
 }
 
-.trainers__item--mountain::before {
-  position: absolute;
-  content: "";
-  width: 25px;
-  height: 25px;
-  top: 10px;
-  background-image: url("../img/svg/mountain.svg");
-  background-repeat: no-repeat;
-  left: 0;
+.trainers__item--mountain {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    background-image: url("../img/svg/mountain.svg");
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #0266c1;
+    bottom: -39px;
+    border-radius: 50%;
+    left: 0;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -302,7 +343,7 @@
     margin-bottom: 20px;
   }
 
-  .trainers__shadow {
+  [data-content]:before {
     font-size: 40px;
     line-height: 50px;
     top: -18px;
@@ -363,52 +404,90 @@
   .trainers__education {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
     grid-template-areas:
       "map boots"
       "mountain forest";
-    column-gap: 30px;
-    row-gap: 91px;
+    row-gap: 53px;
+    padding: 0;
 
     &::after {
       position: absolute;
       content: "";
-      background-image: url("../img/svg/educataion.svg");
-      width: 368px;
-      height: 68px;
-      bottom: 55px;
+      width: 1px;
+      height: 56px;
+      top: 47%;
+      right: 46.5%;
+      background-color: rgba(2, 102, 193, 0.1);
+      transform: translate(0, -50%);
     }
 
     & li {
-      max-width: 237px;
-      padding-bottom: 0;
-
-      &::after {
-        display: none;
-      }
+      max-width: 100%;
     }
 
     & p {
       margin: 0;
       font-size: 14px;
       line-height: 22px;
+      max-width: 220px;
     }
   }
 
   .trainers__item--map {
     grid-area: map;
+    border-bottom: 1px solid rgba(2, 102, 193, 0.1);
+    padding-bottom: 16px;
+
+    &::before {
+      top: 8px;
+    }
+
+    &::after {
+      bottom: -7px;
+    }
   }
 
   .trainers__item--boots {
     grid-area: boots;
+    padding-bottom: 16px;
+
+    &::before {
+      top: 8px;
+    }
+
+    &::after {
+      bottom: -7px;
+    }
   }
 
   .trainers__item--forest {
     grid-area: forest;
+    padding-top: 19px;
+
+    &::after {
+      top: -7px;
+    }
+
+    &::before {
+      top: unset;
+      bottom: 10px;
+    }
   }
 
   .trainers__item--mountain {
+    border-top: 1px solid rgba(2, 102, 193, 0.1);
     grid-area: mountain;
+    padding-top: 19px;
+
+    &::after {
+      top: -7px;
+    }
+
+    &::before {
+      top: unset;
+      bottom: 10px;
+    }
   }
 }
 
@@ -425,7 +504,7 @@
     margin-bottom: 18px;
   }
 
-  .trainers__shadow {
+  [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: -2px;
@@ -499,9 +578,9 @@
       content: "";
       background-color: rgba(2, 102, 193, 0.1);
       width: 1px;
-      height: calc(100% - 35px);
+      height: calc(100% - 70px);
       left: 8px;
-      bottom: 15px;
+      bottom: 50px;
     }
 
     & li {
@@ -526,55 +605,47 @@
     }
   }
 
-  .trainers__item--map::before {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 19px;
-    top: 50%;
-    transform: translate(0, -50%);
-    background-image: url("../img/svg/map.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
+  .trainers__item--map {
+    border: none;
+    &::before {
+      width: 19px;
+      height: 19px;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-size: cover;
+    }
   }
 
-  .trainers__item--boots::before {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 19px;
-    top: 50%;
-    transform: translate(0, -50%);
-    background-image: url("../img/svg/boots.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
+  .trainers__item--boots {
+    &::before {
+      width: 19px;
+      height: 19px;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-size: cover;
+    }
   }
 
-  .trainers__item--forest::before {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 19px;
-    top: 50%;
-    transform: translate(0, -50%);
-    background-image: url("../img/svg/forest.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
+  .trainers__item--forest {
+    padding: 0;
+    &::before {
+      width: 19px;
+      height: 19px;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-size: cover;
+    }
   }
 
-  .trainers__item--mountain::before {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 19px;
-    top: 50%;
-    transform: translate(0, -50%);
-    background-image: url("../img/svg/mountain.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
+  .trainers__item--mountain {
+    padding: 0;
+    border: none;
+    &::before {
+      width: 19px;
+      height: 19px;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-size: cover;
+    }
   }
 }

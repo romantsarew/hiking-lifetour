@@ -3,7 +3,7 @@ const toursSlider = document.querySelector('.tours__slider');
 const trainersSlider = document.querySelector('.trainers__slider');
 const opinionsSlider = document.querySelector('.opinions__slider');
 const advantagesSlider = document.querySelector('.advantages__slider');
-const fotoSlider = document.querySelector('.foto__slider');
+const photoSlider = document.querySelector('.photo__slider');
 
 function swiperIntroTurnOn() {
 
@@ -140,11 +140,13 @@ function swiperOpinionsTurnOn() {
   }
 }
 
-function swiperAdvantagesTurnOn() {
-  const width = window.innerWidth;
-  if (width > 1200) {
-    // eslint-disable-next-line no-undef, no-unused-vars
-    const swiper = new Swiper(advantagesSlider, {
+// advantages swiper logic
+function swiperAdvantagesInit() {
+  let mySwiper;
+
+  function swiperAdvantagesTurnOn() {
+    // eslint-disable-next-line no-undef
+    mySwiper = new Swiper(advantagesSlider, {
       centeredSlides: true,
       slidesPerView: 'auto',
       initialSlide: 4,
@@ -157,14 +159,37 @@ function swiperAdvantagesTurnOn() {
       },
     });
   }
+
+  function destroyAdvantagesSwiper() {
+    if (mySwiper) {
+      mySwiper.destroy();
+      const advantagesWrapper = advantagesSlider.querySelector('.advantages__wrapper');
+
+      if (advantagesWrapper) {
+        advantagesWrapper.classList.remove('swiper-wrapper');
+      }
+      mySwiper = null;
+    }
+  }
+
+  function handleWindowSizeChange() {
+    if (window.innerWidth > 1199) {
+      swiperAdvantagesTurnOn();
+    } else {
+      destroyAdvantagesSwiper();
+    }
+  }
+
+  handleWindowSizeChange();
+
+  window.addEventListener('resize', handleWindowSizeChange);
 }
 
-function swiperFotoTurnOn() {
-  if (fotoSlider) {
+function swiperPhotoTurnOn() {
+  if (photoSlider) {
     // eslint-disable-next-line no-undef, no-unused-vars
-    const swiper = new Swiper(fotoSlider, {
+    const swiper = new Swiper(photoSlider, {
       loop: false,
-      spaceBetween: 5,
       slidesPerView: 'auto',
 
       breakpoints: {
@@ -183,8 +208,8 @@ function swiperFotoTurnOn() {
       },
 
       navigation: {
-        nextEl: '.foto__button--next',
-        prevEl: '.foto__button--prev',
+        nextEl: '.photo__button--next',
+        prevEl: '.photo__button--prev',
       },
 
     });
@@ -192,4 +217,4 @@ function swiperFotoTurnOn() {
 }
 
 
-export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn, swiperFotoTurnOn};
+export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesInit, swiperPhotoTurnOn};

@@ -3299,13 +3299,14 @@ button,
   color: #2d383f;
 }
 
-.tours__shadow {
+[data-content]:before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
   font-weight: 800;
-  top: 100px;
+  top: 105px;
 }
 
 .tours__buttons {
@@ -3668,7 +3669,7 @@ button,
     line-height: 25px;
     margin-bottom: 43px;
   }
-  .tours__shadow {
+  [data-content]:before {
     font-size: 40px;
     line-height: 40px;
     top: 76px;
@@ -3775,7 +3776,7 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .tours__shadow {
+  [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: 56px;
@@ -3906,13 +3907,13 @@ button,
   color: #2d383f;
 }
 
-.trainers__shadow {
+[data-content]:before {
   position: absolute;
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
   font-weight: 800;
-  top: -15px;
+  top: -17px;
 }
 
 .trainers__description {
@@ -4115,22 +4116,12 @@ button,
           justify-content: space-between;
   margin: 0;
   padding: 0;
+  padding-bottom: 32px;
 }
 .trainers__education li {
   position: relative;
   max-width: 277px;
   padding-left: 40px;
-  padding-bottom: 32px;
-}
-.trainers__education li::after {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 14px;
-  background-color: #0266c1;
-  bottom: -7px;
-  border-radius: 50%;
-  left: 0;
 }
 .trainers__education p {
   margin: 0;
@@ -4150,6 +4141,16 @@ button,
   background-repeat: no-repeat;
   left: 0;
 }
+.trainers__item--map::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #0266c1;
+  bottom: -39px;
+  border-radius: 50%;
+  left: 0;
+}
 
 .trainers__item--boots::before {
   position: absolute;
@@ -4159,6 +4160,16 @@ button,
   top: 10px;
   background-image: url("../img/svg/boots.svg");
   background-repeat: no-repeat;
+  left: 0;
+}
+.trainers__item--boots::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #0266c1;
+  bottom: -39px;
+  border-radius: 50%;
   left: 0;
 }
 
@@ -4172,6 +4183,16 @@ button,
   background-repeat: no-repeat;
   left: 0;
 }
+.trainers__item--forest::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #0266c1;
+  bottom: -39px;
+  border-radius: 50%;
+  left: 0;
+}
 
 .trainers__item--mountain::before {
   position: absolute;
@@ -4181,6 +4202,16 @@ button,
   top: 10px;
   background-image: url("../img/svg/mountain.svg");
   background-repeat: no-repeat;
+  left: 0;
+}
+.trainers__item--mountain::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #0266c1;
+  bottom: -39px;
+  border-radius: 50%;
   left: 0;
 }
 
@@ -4198,7 +4229,7 @@ button,
     line-height: 25px;
     margin-bottom: 20px;
   }
-  .trainers__shadow {
+  [data-content]:before {
     font-size: 40px;
     line-height: 50px;
     top: -18px;
@@ -4254,46 +4285,77 @@ button,
     position: relative;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 30px 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto 91px auto;
+    -ms-grid-columns: 1.1fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
+    -ms-grid-rows: auto 53px auto;
         grid-template-areas: "map boots" "mountain forest";
-    -webkit-column-gap: 30px;
-       -moz-column-gap: 30px;
-            column-gap: 30px;
-    row-gap: 91px;
+    row-gap: 53px;
+    padding: 0;
   }
   .trainers__education::after {
     position: absolute;
     content: "";
-    background-image: url("../img/svg/educataion.svg");
-    width: 368px;
-    height: 68px;
-    bottom: 55px;
+    width: 1px;
+    height: 56px;
+    top: 47%;
+    right: 46.5%;
+    background-color: rgba(2, 102, 193, 0.1);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
   .trainers__education li {
-    max-width: 237px;
-    padding-bottom: 0;
-  }
-  .trainers__education li::after {
-    display: none;
+    max-width: 100%;
   }
   .trainers__education p {
     margin: 0;
     font-size: 14px;
     line-height: 22px;
+    max-width: 220px;
   }
   .trainers__item--map {
     grid-area: map;
+    border-bottom: 1px solid rgba(2, 102, 193, 0.1);
+    padding-bottom: 16px;
+  }
+  .trainers__item--map::before {
+    top: 8px;
+  }
+  .trainers__item--map::after {
+    bottom: -7px;
   }
   .trainers__item--boots {
     grid-area: boots;
+    padding-bottom: 16px;
+  }
+  .trainers__item--boots::before {
+    top: 8px;
+  }
+  .trainers__item--boots::after {
+    bottom: -7px;
   }
   .trainers__item--forest {
     grid-area: forest;
+    padding-top: 19px;
+  }
+  .trainers__item--forest::after {
+    top: -7px;
+  }
+  .trainers__item--forest::before {
+    top: unset;
+    bottom: 10px;
   }
   .trainers__item--mountain {
+    border-top: 1px solid rgba(2, 102, 193, 0.1);
     grid-area: mountain;
+    padding-top: 19px;
+  }
+  .trainers__item--mountain::after {
+    top: -7px;
+  }
+  .trainers__item--mountain::before {
+    top: unset;
+    bottom: 10px;
   }
 }
 
@@ -4304,11 +4366,11 @@ button,
   }
   .trainers__item--boots {
     -ms-grid-row: 1;
-    -ms-grid-column: 3;
+    -ms-grid-column: 2;
   }
   .trainers__item--forest {
     -ms-grid-row: 3;
-    -ms-grid-column: 3;
+    -ms-grid-column: 2;
   }
   .trainers__item--mountain {
     -ms-grid-row: 3;
@@ -4326,7 +4388,7 @@ button,
     line-height: 22px;
     margin-bottom: 18px;
   }
-  .trainers__shadow {
+  [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: -2px;
@@ -4395,9 +4457,9 @@ button,
     content: "";
     background-color: rgba(2, 102, 193, 0.1);
     width: 1px;
-    height: calc(100% - 35px);
+    height: calc(100% - 70px);
     left: 8px;
-    bottom: 15px;
+    bottom: 50px;
   }
   .trainers__education li {
     position: relative;
@@ -4419,61 +4481,51 @@ button,
     font-size: 12px;
     line-height: 18px;
   }
+  .trainers__item--map {
+    border: none;
+  }
   .trainers__item--map::before {
-    position: absolute;
-    content: "";
     width: 19px;
     height: 19px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    background-image: url("../img/svg/map.svg");
-    background-repeat: no-repeat;
     background-size: cover;
-    left: 0;
   }
   .trainers__item--boots::before {
-    position: absolute;
-    content: "";
     width: 19px;
     height: 19px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    background-image: url("../img/svg/boots.svg");
-    background-repeat: no-repeat;
     background-size: cover;
-    left: 0;
+  }
+  .trainers__item--forest {
+    padding: 0;
   }
   .trainers__item--forest::before {
-    position: absolute;
-    content: "";
     width: 19px;
     height: 19px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    background-image: url("../img/svg/forest.svg");
-    background-repeat: no-repeat;
     background-size: cover;
-    left: 0;
+  }
+  .trainers__item--mountain {
+    padding: 0;
+    border: none;
   }
   .trainers__item--mountain::before {
-    position: absolute;
-    content: "";
     width: 19px;
     height: 19px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    background-image: url("../img/svg/mountain.svg");
-    background-repeat: no-repeat;
     background-size: cover;
-    left: 0;
   }
 }
 .about {
@@ -4540,7 +4592,7 @@ button,
   margin-bottom: 57px;
   color: #2d383f;
 }
-.about__text span {
+.about__text [data-content]:before {
   position: absolute;
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
@@ -4614,9 +4666,9 @@ button,
   .about__text h2 {
     font-size: 25px;
     line-height: 25px;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
   }
-  .about__text span {
+  .about__text [data-content]:before {
     font-size: 40px;
     line-height: 40px;
     top: -11px;
@@ -4647,7 +4699,7 @@ button,
     line-height: 22px;
     margin-bottom: 33px;
   }
-  .about__text span {
+  .about__text [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: -2px;
@@ -4686,7 +4738,7 @@ button,
   margin: 0;
   padding-top: 22px;
 }
-.opinions__title span {
+.opinions__title [data-content]:before {
   position: absolute;
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
@@ -4824,7 +4876,7 @@ button,
     line-height: 25px;
     padding-top: 20px;
   }
-  .opinions__title span {
+  .opinions__title [data-content]:before {
     font-size: 40px;
     line-height: 40px;
   }
@@ -4865,7 +4917,7 @@ button,
     line-height: 22px;
     padding-top: 7px;
   }
-  .opinions__title span {
+  .opinions__title [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: 7px;
@@ -4967,7 +5019,7 @@ button,
   text-align: center;
   margin: 0;
 }
-.advantages__container span {
+.advantages__container [data-content]:before {
   position: absolute;
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
@@ -5114,7 +5166,7 @@ button,
     font-size: 25px;
     line-height: 25px;
   }
-  .advantages__container span {
+  .advantages__container [data-content]:before {
     font-size: 40px;
     line-height: 40px;
     top: -10px;
@@ -5180,7 +5232,7 @@ button,
     font-size: 22px;
     line-height: 22px;
   }
-  .advantages__container span {
+  .advantages__container [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: -3px;
@@ -5253,7 +5305,7 @@ button,
   color: #2d383f;
   margin: 0;
 }
-.photo__container span {
+.photo__container [data-content]:before {
   position: absolute;
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
@@ -5334,10 +5386,6 @@ button,
   width: 100%;
 }
 
-.photo__wrapper {
-  gap: 5px;
-}
-
 .photo__button svg {
   color: #ffffff;
 }
@@ -5406,7 +5454,7 @@ button,
     font-size: 25px;
     line-height: 25px;
   }
-  .photo__container span {
+  .photo__container [data-content]:before {
     font-size: 40px;
     line-height: 40px;
     top: -10px;
@@ -5445,7 +5493,7 @@ button,
     font-size: 22px;
     line-height: 22px;
   }
-  .photo__container span {
+  .photo__container [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: -3px;
@@ -5472,9 +5520,6 @@ button,
         -ms-flex-direction: row;
             flex-direction: row;
     margin-left: auto;
-  }
-  .photo__wrapper {
-    gap: 3px;
   }
   .photo__slide {
     max-width: 159px;
@@ -5523,6 +5568,7 @@ button,
   width: 100%;
   height: 100%;
   min-height: 800px;
+  background-color: #124d0d;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .form {
@@ -5993,7 +6039,7 @@ button,
   margin: 0;
   padding-top: 19px;
 }
-.contacts__title span {
+.contacts__title [data-content]:before {
   position: absolute;
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
@@ -6123,7 +6169,7 @@ button,
     line-height: 25px;
     padding-top: 15px;
   }
-  .contacts__title span {
+  .contacts__title [data-content]:before {
     font-size: 40px;
     line-height: 40px;
   }
@@ -6198,7 +6244,7 @@ button,
     line-height: 22px;
     padding-top: 6px;
   }
-  .contacts__title span {
+  .contacts__title [data-content]:before {
     font-size: 26px;
     line-height: 26px;
   }

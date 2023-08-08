@@ -57,7 +57,7 @@
     margin: 0;
   }
 
-  & span {
+  & [data-content]:before {
     position: absolute;
     color: rgb(45, 56, 63, 0.03);
     font-size: 55px;
@@ -221,7 +221,7 @@
       line-height: 25px;
     }
 
-    & span {
+    & [data-content]:before {
       font-size: 40px;
       line-height: 40px;
       top: -10px;
@@ -290,7 +290,7 @@
       line-height: 22px;
     }
 
-    & span {
+    & [data-content]:before {
       font-size: 26px;
       line-height: 26px;
       top: -3px;
