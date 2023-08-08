@@ -52,13 +52,14 @@
   color: #2d383f;
 }
 
-.tours__shadow {
+[data-content]:before {
   position: absolute;
+  content: attr(data-content);
   color: rgb(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
   font-weight: 800;
-  top: 100px;
+  top: 105px;
 }
 
 .tours__buttons {
@@ -408,7 +409,7 @@
     margin-bottom: 43px;
   }
 
-  .tours__shadow {
+  [data-content]:before {
     font-size: 40px;
     line-height: 40px;
     top: 76px;
@@ -514,7 +515,7 @@
     max-width: 156px;
   }
 
-  .tours__shadow {
+  [data-content]:before {
     font-size: 26px;
     line-height: 26px;
     top: 56px;

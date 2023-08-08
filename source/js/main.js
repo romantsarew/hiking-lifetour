@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {burgerMenuInit} from './modules/burger/burger-init';
-import {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesTurnOn, swiperFotoTurnOn} from './modules/swiper/swiper-initial';
+import {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesInit, swiperPhotoTurnOn} from './modules/swiper/swiper-initial';
 import {findVideos} from './modules/video/init-video';
 import {mapInit} from './modules/map/map-init';
 
@@ -21,8 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
   swiperToursTurnOn();
   swiperTrainersTurnOn();
   swiperOpinionsTurnOn();
-  swiperAdvantagesTurnOn();
-  swiperFotoTurnOn();
+  swiperAdvantagesInit();
+  swiperPhotoTurnOn();
   mapInit();
   findVideos();
 

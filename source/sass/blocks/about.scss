@@ -56,7 +56,7 @@
     color: #2d383f;
   }
 
-  & span {
+  & [data-content]:before {
     position: absolute;
     color: rgb(45, 56, 63, 0.03);
     font-size: 55px;
@@ -126,10 +126,10 @@
     & h2 {
       font-size: 25px;
       line-height: 25px;
-      margin-bottom: 33px;
+      margin-bottom: 35px;
     }
 
-    & span {
+    & [data-content]:before {
       font-size: 40px;
       line-height: 40px;
       top: -11px;
@@ -168,7 +168,7 @@
       margin-bottom: 33px;
     }
 
-    & span {
+    & [data-content]:before {
       font-size: 26px;
       line-height: 26px;
       top: -2px;
