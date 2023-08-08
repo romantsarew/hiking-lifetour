@@ -26,15 +26,16 @@
     color: #2d383f;
     margin: 0;
     padding-top: 19px;
-  }
 
-  & [data-content]:before {
-    position: absolute;
-    color: rgb(45, 56, 63, 0.03);
-    font-size: 55px;
-    line-height: 55px;
-    font-weight: 800;
-    top: 3px;
+    &::before {
+      position: absolute;
+      content: attr(data-content);
+      color: rgb(45, 56, 63, 0.03);
+      font-size: 55px;
+      line-height: 55px;
+      font-weight: 800;
+      top: 3px;
+    }
   }
 
   & p {
@@ -163,11 +164,11 @@
       font-size: 25px;
       line-height: 25px;
       padding-top: 15px;
-    }
 
-    & [data-content]:before {
-      font-size: 40px;
-      line-height: 40px;
+      &::before {
+        font-size: 40px;
+        line-height: 40px;
+      }
     }
 
     & p {
@@ -254,11 +255,11 @@
       font-size: 22px;
       line-height: 22px;
       padding-top: 6px;
-    }
 
-    & [data-content]:before {
-      font-size: 26px;
-      line-height: 26px;
+      &::before {
+        font-size: 26px;
+        line-height: 26px;
+      }
     }
 
     & p {

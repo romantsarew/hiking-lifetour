@@ -3298,15 +3298,14 @@ button,
   margin-bottom: 54px;
   color: #2d383f;
 }
-
-[data-content]:before {
+.tours__title::before {
   position: absolute;
   content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
   font-weight: 800;
-  top: 105px;
+  top: 106px;
 }
 
 .tours__buttons {
@@ -3669,7 +3668,7 @@ button,
     line-height: 25px;
     margin-bottom: 43px;
   }
-  [data-content]:before {
+  .tours__title::before {
     font-size: 40px;
     line-height: 40px;
     top: 76px;
@@ -3774,12 +3773,10 @@ button,
     margin-bottom: 28px;
     max-width: 156px;
   }
-}
-@media (max-width: 767px) {
-  [data-content]:before {
+  .tours__title::before {
     font-size: 26px;
     line-height: 26px;
-    top: 56px;
+    top: 64px;
   }
 }
 @media (max-width: 767px) {
@@ -3906,9 +3903,9 @@ button,
   margin-bottom: 33px;
   color: #2d383f;
 }
-
-[data-content]:before {
+.trainers__title::before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
@@ -4229,7 +4226,7 @@ button,
     line-height: 25px;
     margin-bottom: 20px;
   }
-  [data-content]:before {
+  .trainers__title::before {
     font-size: 40px;
     line-height: 50px;
     top: -18px;
@@ -4388,10 +4385,10 @@ button,
     line-height: 22px;
     margin-bottom: 18px;
   }
-  [data-content]:before {
+  .trainers__title::before {
     font-size: 26px;
     line-height: 26px;
-    top: -2px;
+    top: -4px;
   }
   .trainers__description {
     max-width: 100%;
@@ -4592,8 +4589,9 @@ button,
   margin-bottom: 57px;
   color: #2d383f;
 }
-.about__text [data-content]:before {
+.about__text h2::before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
@@ -4668,7 +4666,7 @@ button,
     line-height: 25px;
     margin-bottom: 35px;
   }
-  .about__text [data-content]:before {
+  .about__text h2::before {
     font-size: 40px;
     line-height: 40px;
     top: -11px;
@@ -4699,10 +4697,10 @@ button,
     line-height: 22px;
     margin-bottom: 33px;
   }
-  .about__text [data-content]:before {
+  .about__text h2::before {
     font-size: 26px;
     line-height: 26px;
-    top: -2px;
+    top: -3px;
   }
   .about__text h3 {
     font-size: 16px;
@@ -4738,13 +4736,14 @@ button,
   margin: 0;
   padding-top: 22px;
 }
-.opinions__title [data-content]:before {
+.opinions__title h2::before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
   font-weight: 800;
-  top: 3px;
+  top: 6px;
 }
 
 .opinions__buttons {
@@ -4876,9 +4875,10 @@ button,
     line-height: 25px;
     padding-top: 20px;
   }
-  .opinions__title [data-content]:before {
+  .opinions__title h2::before {
     font-size: 40px;
     line-height: 40px;
+    top: 8px;
   }
   .opinions__slider {
     margin-left: 45px;
@@ -4917,10 +4917,10 @@ button,
     line-height: 22px;
     padding-top: 7px;
   }
-  .opinions__title [data-content]:before {
+  .opinions__title h2::before {
     font-size: 26px;
     line-height: 26px;
-    top: 7px;
+    top: 6px;
   }
   .opinions__slider {
     max-width: 100%;
@@ -5019,8 +5019,9 @@ button,
   text-align: center;
   margin: 0;
 }
-.advantages__container [data-content]:before {
+.advantages__container h2::before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
@@ -5166,7 +5167,7 @@ button,
     font-size: 25px;
     line-height: 25px;
   }
-  .advantages__container [data-content]:before {
+  .advantages__container h2::before {
     font-size: 40px;
     line-height: 40px;
     top: -10px;
@@ -5191,6 +5192,11 @@ button,
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+  .swiper .advantages__wrapper {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
   .advantages__slide {
     max-width: 100%;
@@ -5232,7 +5238,7 @@ button,
     font-size: 22px;
     line-height: 22px;
   }
-  .advantages__container [data-content]:before {
+  .advantages__container h2::before {
     font-size: 26px;
     line-height: 26px;
     top: -3px;
@@ -5305,8 +5311,9 @@ button,
   color: #2d383f;
   margin: 0;
 }
-.photo__container [data-content]:before {
+.photo__container h2::before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
@@ -5454,7 +5461,7 @@ button,
     font-size: 25px;
     line-height: 25px;
   }
-  .photo__container [data-content]:before {
+  .photo__container h2::before {
     font-size: 40px;
     line-height: 40px;
     top: -10px;
@@ -5493,7 +5500,7 @@ button,
     font-size: 22px;
     line-height: 22px;
   }
-  .photo__container [data-content]:before {
+  .photo__container h2::before {
     font-size: 26px;
     line-height: 26px;
     top: -3px;
@@ -6039,8 +6046,9 @@ button,
   margin: 0;
   padding-top: 19px;
 }
-.contacts__title [data-content]:before {
+.contacts__title h2::before {
   position: absolute;
+  content: attr(data-content);
   color: rgba(45, 56, 63, 0.03);
   font-size: 55px;
   line-height: 55px;
@@ -6169,7 +6177,7 @@ button,
     line-height: 25px;
     padding-top: 15px;
   }
-  .contacts__title [data-content]:before {
+  .contacts__title h2::before {
     font-size: 40px;
     line-height: 40px;
   }
@@ -6244,7 +6252,7 @@ button,
     line-height: 22px;
     padding-top: 6px;
   }
-  .contacts__title [data-content]:before {
+  .contacts__title h2::before {
     font-size: 26px;
     line-height: 26px;
   }

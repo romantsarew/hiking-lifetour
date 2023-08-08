@@ -140,11 +140,9 @@ function swiperOpinionsTurnOn() {
   }
 }
 
-// advantages swiper logic
-function swiperAdvantagesInit() {
-  let mySwiper;
-
-  function swiperAdvantagesTurnOn() {
+function manageAdvantagesSwiper() {
+  let mySwiper = null;
+  function initSwiper() {
     // eslint-disable-next-line no-undef
     mySwiper = new Swiper(advantagesSlider, {
       centeredSlides: true,
@@ -160,23 +158,20 @@ function swiperAdvantagesInit() {
     });
   }
 
-  function destroyAdvantagesSwiper() {
+  function destroySwiper() {
     if (mySwiper) {
       mySwiper.destroy();
-      const advantagesWrapper = advantagesSlider.querySelector('.advantages__wrapper');
-
-      if (advantagesWrapper) {
-        advantagesWrapper.classList.remove('swiper-wrapper');
-      }
       mySwiper = null;
     }
   }
 
   function handleWindowSizeChange() {
-    if (window.innerWidth > 1199) {
-      swiperAdvantagesTurnOn();
+    if (window.innerWidth > 1200) {
+      if (!mySwiper) {
+        initSwiper();
+      }
     } else {
-      destroyAdvantagesSwiper();
+      destroySwiper();
     }
   }
 
@@ -217,4 +212,4 @@ function swiperPhotoTurnOn() {
 }
 
 
-export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, swiperAdvantagesInit, swiperPhotoTurnOn};
+export {swiperIntroTurnOn, swiperToursTurnOn, swiperTrainersTurnOn, swiperOpinionsTurnOn, manageAdvantagesSwiper, swiperPhotoTurnOn};
