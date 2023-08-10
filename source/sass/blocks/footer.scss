@@ -42,9 +42,10 @@
 
 .footer__nav {
   display: flex;
-  gap: 22px;
+  justify-content: space-between;
   padding-right: 65px;
   padding-bottom: 2px;
+  max-width: 740px;
 }
 
 .footer__nav-list {
@@ -54,7 +55,12 @@
   margin: 0;
   padding: 0;
   gap: 23px;
-  max-width: 600px;
+  max-width: 330px;
+
+  &:first-child {
+    margin-right: 22px;
+  }
+
 
   & a {
     padding: 0 5px;
@@ -80,26 +86,34 @@
 }
 
 .footer__contact {
-  color: #2d383f;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 600;
   margin-left: auto;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-  &:hover {
-    @include hover;
-    color: #1c3374;
-  }
+  & a {
+    color: #2d383f;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-left: auto;
 
-  &:focus {
-    @include focus;
-    outline: none;
-    color: #1c3374;
-  }
+    &:hover {
+      @include hover;
+      color: #1c3374;
+    }
 
-  &:active {
-    @include active;
-    color: #0266c1;
+    &:focus {
+      @include focus;
+      outline: none;
+      color: #1c3374;
+    }
+
+    &:active {
+      @include active;
+      color: #0266c1;
+    }
   }
 }
 
@@ -184,12 +198,16 @@
   .footer__nav {
     padding: 0;
     padding-bottom: 12px;
-    gap: 15px;
+    max-width: 550px;
   }
 
   .footer__nav-list {
     gap: 10px;
     max-width: 100%;
+
+    &:first-child {
+      margin-right: 15px;
+    }
 
     & a {
       font-size: 14px;
@@ -217,7 +235,7 @@
   }
 
   .footer__logo {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     padding-left: 5px;
 
     & svg {
@@ -228,8 +246,7 @@
   .footer__nav {
     width: 100%;
     display: flex;
-    gap: 0;
-    justify-content: space-between;
+    gap: 7px;
   }
 
   .footer__nav-list {

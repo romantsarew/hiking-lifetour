@@ -11,7 +11,7 @@ function mapInit() {
   }).addTo(map);
 
   const basicIcon = L.icon({
-    iconUrl: '../img/svg/map-marker.svg',
+    iconUrl: 'img/svg/map-marker.svg',
     iconSize: [33, 44],
   });
 

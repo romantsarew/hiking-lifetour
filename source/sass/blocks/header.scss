@@ -6,6 +6,7 @@
 
 .header__container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 40px 0 0;
   max-width: 1200px;
@@ -72,28 +73,35 @@
 }
 
 .header__contact {
-  color: $color-default-white;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 600;
   margin-left: auto;
   order: 2;
-  padding-bottom: 4px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-  &:hover {
-    @include hover;
-    color: #1c3374;
-  }
+  & a {
+    color: $color-default-white;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    padding-bottom: 4px;
 
-  &:focus {
-    @include focus;
-    outline: none;
-    color: #1c3374;
-  }
+    &:hover {
+      @include hover;
+      color: #1c3374;
+    }
 
-  &:active {
-    @include active;
-    color: #0266c1;
+    &:focus {
+      @include focus;
+      outline: none;
+      color: #1c3374;
+    }
+
+    &:active {
+      @include active;
+      color: #0266c1;
+    }
   }
 }
 
@@ -105,7 +113,7 @@
   .header__container {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px 30px 70px 30px;
+    padding: 30px 30px 58px 30px;
     max-width: 100%;
     margin: 0;
     width: 100%;
@@ -127,7 +135,7 @@
   .header__nav {
     order: 3;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   .header__nav-list {
@@ -166,11 +174,14 @@
   }
 
   .header__contact {
-    order: 2;
-    margin: 0;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 600;
+    margin-left: 0;
+    & a {
+      order: 2;
+      margin: 0;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 600;
+    }
   }
 
   .header__nav-button {
@@ -204,6 +215,7 @@
       height: 19px;
       background-repeat: no-repeat;
       background-position: center;
+      left: -2px;
     }
 
     & span {
@@ -313,11 +325,19 @@
   }
 }
 
+// добавить оверлей при открытом меню и отключить скролл
+.menu--opened {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+
 @media (max-width: $mobile-width) {
   .header__container {
     display: grid;
     width: 100%;
-    padding: 15px 0 50px;
+    padding: 15px 0 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "button logo"
@@ -339,7 +359,7 @@
   }
 
   .header__nav {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .header__nav-list {
@@ -353,10 +373,13 @@
   }
 
   .header__contact {
-    font-size: 14px;
-    line-height: 14px;
     margin-left: auto;
-    grid-area: contact;
+    & a {
+      font-size: 14px;
+      line-height: 14px;
+      margin-left: auto;
+      grid-area: contact;
+    }
   }
 
   .header__nav-button {
