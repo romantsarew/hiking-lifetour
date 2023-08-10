@@ -4,8 +4,8 @@
   &::before {
     position: absolute;
     content: "";
-    width: 808px;
-    height: 474px;
+    width: 50%;
+    min-height: 79%;
     background-image: url("../img/about-image.webp");
     background-size: cover;
     top: 95px;
@@ -151,7 +151,6 @@
       top: 0;
       width: 100%;
       min-height: 402px;
-      height: auto;
       background-position: 28% 0;
     }
   }

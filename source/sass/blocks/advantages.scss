@@ -139,6 +139,7 @@
   min-height: 329px;
   gap: 15px;
   background-color: $color-default-white;
+  height: auto;
 
   & h3 {
     font-size: 18px;
@@ -256,6 +257,7 @@
     padding: 102px 20px 29px;
     min-height: 272px;
     place-self: center;
+    height: 100%;
 
     & h3 {
       font-size: 16px;

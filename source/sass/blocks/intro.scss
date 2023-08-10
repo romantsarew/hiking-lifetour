@@ -3,9 +3,15 @@
   min-height: 800px;
 }
 
+.swiper .intro__swiper {
+  z-index: 0;
+}
+
 .intro__slide {
   position: relative;
   background-size: cover;
+  padding: 0 15px;
+  height: auto;
 
   &::before {
     position: absolute;
@@ -375,7 +381,7 @@
       height: 312px;
       top: inherit;
       bottom: 169px;
-      right: 28%;
+      right: 30%;
       transform: translate(28%, 0);
     }
 
@@ -455,7 +461,7 @@
   }
 
   .intro__slide-container {
-    padding: 139px 15px 48px;
+    padding: 139px 0 48px;
   }
 
   .intro__slide--kamchatka .intro__slide-container {

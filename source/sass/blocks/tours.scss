@@ -132,6 +132,7 @@
   min-height: 412px;
   max-width: 380px;
   padding: 206px 20px 28px;
+  height: auto;
 
   &::before {
     position: absolute;
@@ -466,6 +467,7 @@
 
     & dd {
       gap: 3px;
+      padding-right: 3px;
     }
   }
 
