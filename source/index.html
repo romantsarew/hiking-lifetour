@@ -913,14 +913,14 @@
                   data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
                   data-required>
                   <label for="name">
-                    <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+                    <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required aria-label="ваше имя.">
                   </label>
                 </div>
                 <div class="form__tel" data-validate-type="phone" data-on-input-validate
                   data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
                   data-message-success="Поле заполнено верно" data-required data-phone-length="18">
                   <label for="tel">
-                    <input type="tel" id="tel" name="tel" placeholder="Телефон" required>
+                    <input type="tel" id="tel" name="tel" placeholder="Телефон" required aria-label="ваш телефон.">
                   </label>
                 </div>
                 <button class="form__button" type="submit">Отправить</button>
