@@ -2,6 +2,7 @@ function burgerMenuInit() {
   const header = document.querySelector('.header');
   const navMain = document.querySelector('.header__nav');
   const navButton = document.querySelector('.header__nav-button');
+  const navLinks = document.querySelectorAll('.header__nav-list a');
   const body = document.body;
 
   navMain.classList.remove('header__nav--nojs');
@@ -36,6 +37,14 @@ function burgerMenuInit() {
       navMain.classList.remove('header__nav--opened');
       body.classList.remove('menu--opened');
     }
+  });
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      navMain.classList.add('header__nav--closed');
+      navMain.classList.remove('header__nav--opened');
+      body.classList.remove('menu--opened');
+    });
   });
 }
 

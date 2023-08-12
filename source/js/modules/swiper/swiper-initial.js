@@ -167,7 +167,7 @@ function manageAdvantagesSwiper() {
   }
 
   function handleWindowSizeChange() {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth >= 1200) {
       if (!mySwiper) {
         initSwiper();
       }

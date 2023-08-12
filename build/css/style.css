@@ -2171,6 +2171,12 @@ button,
 }
 
 .header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  padding: 40px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2179,9 +2185,6 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0 0;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .header__logo {
@@ -2248,6 +2251,9 @@ button,
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__contact a {
   color: #ffffff;
@@ -2272,6 +2278,10 @@ button,
 
 @media (max-width: 1199px) {
   .header__container {
+    overflow-y: auto;
+    max-height: 420px;
+  }
+  .header__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2284,6 +2294,7 @@ button,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
   }
   .header__logo {
     color: #ffffff;
@@ -2347,6 +2358,7 @@ button,
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
+    color: #2d383f;
   }
   .header__nav-button {
     position: relative;
@@ -2478,7 +2490,7 @@ button,
 }
 
 @media (max-width: 767px) {
-  .header__container {
+  .header__wrapper {
     display: -ms-grid;
     display: grid;
     width: 100%;
@@ -2795,6 +2807,9 @@ button,
     display: -ms-flexbox;
     display: flex;
     gap: 7px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .footer__nav-list {
     -webkit-box-orient: vertical;
@@ -3343,7 +3358,7 @@ button,
 
 .tours__container {
   position: relative;
-  padding: 123px 0 124px;
+  padding: 123px 0 125px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -3519,7 +3534,9 @@ button,
   max-width: 100%;
   margin-bottom: 23px;
   row-gap: 5px;
-  gap: 37px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .tours__point {
@@ -3592,7 +3609,8 @@ button,
   font-size: 12px;
   line-height: 12px;
   min-height: 20px;
-  max-width: 82px;
+  min-width: 82px;
+  max-width: 90px;
 }
 .tours__nights::before {
   position: absolute;
@@ -3629,7 +3647,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 7px;
+  gap: 6px;
   max-width: 88px;
 }
 .tours__name dt {
@@ -3650,7 +3668,7 @@ button,
 }
 
 .tours__name--group {
-  padding-right: px;
+  padding-right: 4px;
 }
 
 .tours__star {
@@ -3785,6 +3803,9 @@ button,
     gap: 3px;
     padding-right: 3px;
   }
+  .tours__name--group {
+    padding-right: 0;
+  }
   .tours__link {
     position: relative;
     display: -webkit-box;
@@ -3852,13 +3873,13 @@ button,
   .tours__slider {
     padding: 0;
     margin-bottom: 29px;
+    max-width: 400px;
   }
 }
 @media (max-width: 767px) {
   .tours__slide {
-    min-height: 412px;
     min-width: 100%;
-    max-width: 100%;
+    min-height: 412px;
     padding: 196px 20px 28px;
   }
   .tours__slide h3 {
@@ -3872,10 +3893,13 @@ button,
   .tours__data {
     position: relative;
     margin-bottom: 15px;
-    gap: 19px;
     row-gap: 15px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -3897,6 +3921,7 @@ button,
 @media (max-width: 767px) {
   .tours__nights {
     min-height: 20px;
+    margin-right: 30%;
   }
   .tours__nights::before {
     top: 0;
@@ -4471,7 +4496,7 @@ button,
   .trainers__title {
     font-size: 22px;
     line-height: 22px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
   }
   .trainers__title::before {
     font-size: 26px;
@@ -4715,15 +4740,17 @@ button,
   .about::before {
     width: 475px;
     height: 402px;
-    top: 60px;
+    top: 62px;
     left: 0;
     background-image: url("../img/about-image-tablet.webp");
     background-repeat: no-repeat;
+    min-height: 60%;
   }
 }
 @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 1.5dppx) {
   .about::before {
     background-image: url("../img/about-image-tablet@2x.webp");
+    background-size: cover;
   }
 }
 @media (max-width: 1199px) {
@@ -4776,7 +4803,7 @@ button,
     background-position: 28% 0;
   }
   .about__container {
-    padding: 448px 0 30px;
+    padding: 450px 0 30px;
   }
   .about__text {
     padding-left: 0;
