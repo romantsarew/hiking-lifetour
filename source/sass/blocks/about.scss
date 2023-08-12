@@ -96,13 +96,15 @@
     &::before {
       width: 475px;
       height: 402px;
-      top: 60px;
+      top: 62px;
       left: 0;
       background-image: url("../img/about-image-tablet.webp");
       background-repeat: no-repeat;
+      min-height: 60%;
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/about-image-tablet@2x.webp");
+        background-size: cover;
       }
     }
 
@@ -156,7 +158,7 @@
   }
 
   .about__container {
-    padding: 448px 0 30px;
+    padding: 450px 0 30px;
   }
 
   .about__text {
